@@ -24,7 +24,18 @@
 
 ## Specifications
 
-*
+* Stores the following information about an animal:
+  * Species
+  * Name
+  * Age
+  * Diet
+  * Zoo Location
+  * Number of Caretakers Needed
+  * Sex
+  * Like
+  * Dislike
+* Allows zoo employees to create, view, and edit an animal's record.
+* Allows zoo employees to filter list of animals by young (< 2 years old) and old (>= 2 years old).
 
 ## Support and contact details
 
