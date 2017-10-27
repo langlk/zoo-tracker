@@ -1,3 +1,15 @@
+.jumbotron {
+  padding-bottom: 1.2em;
+}
+
+.options {
+  padding-top: .8em;
+}
+
+.options .btn {
+  margin: 0px .4em;
+}
+
 #animal-panels {
   display: flex;
   flex-wrap: wrap;

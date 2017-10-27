@@ -8,7 +8,7 @@ import { Animal } from './animal.model';
     <div class="container">
       <div class="jumbotron">
         <h1>Seattle Zoo Tracker</h1>
-        <div>
+        <div class="options">
           <button type="button" class="btn" (click)="showAll()">
             All Animals
           </button>
