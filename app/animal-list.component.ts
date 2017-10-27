@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 import { Animal } from './animal.model';
 
@@ -7,7 +7,8 @@ import { Animal } from './animal.model';
   template: `
     <h2>All Animals</h2>
     <ul>
-      <li *ngFor="let animal of animals">
+      <li *ngFor="let animal of animals"
+        (click)="edit(animal)">
         {{animal.name}} - {{animal.species}}
       </li>
     </ul>
@@ -16,4 +17,9 @@ import { Animal } from './animal.model';
 
 export class AnimalListComponent {
   @Input() animals: Animal[];
+  @Output() editClick = new EventEmitter();
+
+  edit(animal: Animal) {
+    this.editClick.emit(animal);
+  }
 }

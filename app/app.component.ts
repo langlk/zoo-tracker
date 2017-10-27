@@ -6,7 +6,7 @@ import { Animal } from './animal.model';
   selector: 'app-root',
   template: `
     <h1>Epicodus Zoo</h1>
-    <animal-list [animals]="animalsMaster"></animal-list>
+    <animal-list [animals]="animalsMaster" (editClick)="edit($event)"></animal-list>
     <new-animal (addAnimal)="add($event)"></new-animal>
     <edit-animal [animal]="editAnimal" (editDone)="closeEdit()"></edit-animal>
   `
@@ -24,6 +24,10 @@ export class AppComponent {
 
   add(animal: Animal) {
     this.animalsMaster.push(animal);
+  }
+
+  edit(animal: Animal) {
+    this.editAnimal = animal;
   }
 
   closeEdit() {
