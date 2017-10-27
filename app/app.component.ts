@@ -5,10 +5,20 @@ import { Animal } from './animal.model';
 @Component({
   selector: 'app-root',
   template: `
-    <h1>Epicodus Zoo</h1>
-    <animal-list [animals]="animalsMaster" (editClick)="edit($event)"></animal-list>
-    <new-animal (addAnimal)="add($event)"></new-animal>
-    <edit-animal [animal]="editAnimal" (editDone)="closeEdit()"></edit-animal>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Seattle Zoo Tracker</h1>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <animal-list [animals]="animalsMaster" (editClick)="edit($event)"></animal-list>
+        </div>
+        <div class="col-sm-6">
+          <edit-animal [animal]="editAnimal" (editDone)="closeEdit()"></edit-animal>
+        </div>
+      </div>
+      <new-animal (addAnimal)="add($event)"></new-animal>
+    </div>
   `
 })
 
