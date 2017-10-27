@@ -8,6 +8,7 @@ import { Animal } from './animal.model';
     <h1>Epicodus Zoo</h1>
     <animal-list [animals]="animalsMaster"></animal-list>
     <new-animal (addAnimal)="add($event)"></new-animal>
+    <edit-animal [animal]="editAnimal" (editDone)="closeEdit()"></edit-animal>
   `
 })
 
@@ -19,8 +20,13 @@ export class AppComponent {
     new Animal("Moose", "Morris", 1, "Herbivore", "Forrest", 2, "M", "Wading", "Loud noises"),
     new Animal("Racoon", "Rocket", 5, "Omnivore", "Forrest", 2, "M", "Trash cans", "People")
   ];
+  editAnimal: Animal;
 
   add(animal: Animal) {
     this.animalsMaster.push(animal);
+  }
+
+  closeEdit() {
+    this.editAnimal = null;
   }
 }
