@@ -14,19 +14,20 @@ import { Animal } from './animal.model';
     <div id="animal-panels">
       <div *ngFor="let animal of animals | age:ageType"
         (click)="edit(animal)"
-        class="panel panel-default">
+        class="panel panel-default animal-panel">
         <div class="panel-heading">
-          <h3 class="card-header">{{animal.name}}</h3>
+          <h3>{{animal.name}}</h3>
+          <h4>{{animal.sex}} {{animal.species}}, Age {{animal.age}}</h4>
         </div>
         <div class="panel-body">
-          <h4>{{animal.sex}} {{animal.species}}, Age {{animal.age}}</h4>
+
           <h4>{{animal.diet}}</h4>
           <p><strong>Likes: </strong>{{animal.likes}}</p>
           <p><strong>Dislikes: </strong>{{animal.dislikes}}</p>
         </div>
         <div class="panel-footer">
           <h5>{{animal.location}}</h5>
-          <h5>Caretakers: {{animal.caretakersNeeded}}</h5>
+          <h5 class="caretakers">Caretakers: {{animal.caretakersNeeded}}</h5>
         </div>
       </div>
     </div>

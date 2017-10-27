@@ -1,0 +1,22 @@
+.panel-heading h3 {
+  display: inline-block;
+  width: 39%;
+  min-width: 100px;
+}
+
+.panel-heading h4 {
+  display: inline-block;
+  width: 59%;
+  min-width: 100px;
+  text-align: right;
+}
+
+.animal-panel .panel-footer h5 {
+  display: inline-block;
+  width: 49%;
+  min-width: 100px;
+}
+
+.caretakers {
+  text-align: right;
+}
