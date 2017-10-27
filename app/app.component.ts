@@ -24,11 +24,11 @@ import { Animal } from './animal.model';
 
 export class AppComponent {
   animalsMaster: Animal[] = [
-    new Animal("Lion", "Simba", 5, "Carnivore", "Savanna", 3, "M", "Shade", "Hyennas"),
-    new Animal("Yak", "Yolanda", 1, "Herbivore", "Steppes", 2, "F", "Snow", "Warm Weather"),
-    new Animal("Penguin", "Bond", 3, "Carnivore", "Antarctic", 1, "M", "Fish", "Seals"),
-    new Animal("Moose", "Morris", 1, "Herbivore", "Forrest", 2, "M", "Wading", "Loud noises"),
-    new Animal("Racoon", "Rocket", 5, "Omnivore", "Forrest", 2, "M", "Trash cans", "People")
+    new Animal("Lion", "Simba", 5, "Carnivore", "Savanna", 3, "Male", "Shade", "Hyennas"),
+    new Animal("Yak", "Yolanda", 1, "Herbivore", "Steppes", 2, "Female", "Snow", "Warm Weather"),
+    new Animal("Penguin", "Bond", 3, "Carnivore", "Antarctic", 1, "Male", "Fish", "Seals"),
+    new Animal("Moose", "Morris", 1, "Herbivore", "Forrest", 2, "Male", "Wading", "Loud noises"),
+    new Animal("Racoon", "Rocket", 5, "Omnivore", "Forrest", 2, "Male", "Trash cans", "People")
   ];
   editAnimal: Animal;
 

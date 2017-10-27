@@ -11,12 +11,25 @@ import { Animal } from './animal.model';
       <option value="young">Young Animals Only</option>
       <option value="old">Old Animals Only</option>
     </select>
-    <ul>
-      <li *ngFor="let animal of animals | age:ageType"
-        (click)="edit(animal)">
-        {{animal.name}} - {{animal.species}}
-      </li>
-    </ul>
+    <div id="animal-panels">
+      <div *ngFor="let animal of animals | age:ageType"
+        (click)="edit(animal)"
+        class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="card-header">{{animal.name}}</h3>
+        </div>
+        <div class="panel-body">
+          <h4>{{animal.sex}} {{animal.species}}, Age {{animal.age}}</h4>
+          <h4>{{animal.diet}}</h4>
+          <p><strong>Likes: </strong>{{animal.likes}}</p>
+          <p><strong>Dislikes: </strong>{{animal.dislikes}}</p>
+        </div>
+        <div class="panel-footer">
+          <h5>{{animal.location}}</h5>
+          <h5>Caretakers: {{animal.caretakersNeeded}}</h5>
+        </div>
+      </div>
+    </div>
   `
 })
 
