@@ -5,7 +5,7 @@ import { Animal } from './animal.model';
 @Component({
   selector: 'edit-animal',
   template: `
-    <div *ngIf="animal">
+    <div id="edit-animal">
       <h2>Edit Animal</h2>
       <form>
         <div class="form-group">

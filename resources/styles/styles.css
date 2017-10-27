@@ -1,17 +1,33 @@
+#animal-panels {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.animal-panel {
+  width: 30%;
+  min-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.animal-panel:hover {
+  cursor: pointer;
+}
+
 .panel-heading h3 {
   display: inline-block;
-  width: 39%;
-  min-width: 100px;
+  width: 34%;
+  min-width: 60px;
 }
 
 .panel-heading h4 {
   display: inline-block;
-  width: 59%;
+  width: 63%;
   min-width: 100px;
   text-align: right;
 }
 
-.animal-panel .panel-footer h5 {
+.panel-footer h5 {
   display: inline-block;
   width: 49%;
   min-width: 100px;

@@ -8,16 +8,26 @@ import { Animal } from './animal.model';
     <div class="container">
       <div class="jumbotron">
         <h1>Seattle Zoo Tracker</h1>
-      </div>
-      <div class="row">
-        <div class="col-sm-6">
-          <animal-list [animals]="animalsMaster" (editClick)="edit($event)"></animal-list>
+        <div>
+          <button type="button" class="btn" (click)="showAll()">
+            All Animals
+          </button>
+          <button type="button" class="btn" (click)="showAdd()">
+            Add Animal
+          </button>
         </div>
-        <div class="col-sm-6">
-          <edit-animal [animal]="editAnimal" (editDone)="closeEdit()"></edit-animal>
-        </div>
       </div>
-      <new-animal (addAnimal)="add($event)"></new-animal>
+      <animal-list
+        *ngIf="focusAll"
+        [animals]="animalsMaster"
+        (editClick)="edit($event)">
+      </animal-list>
+      <edit-animal
+        *ngIf="editAnimal"
+        [animal]="editAnimal"
+        (editDone)="closeEdit()">
+      </edit-animal>
+      <new-animal *ngIf="focusAdd" (addAnimal)="add($event)"></new-animal>
     </div>
   `
 })
@@ -30,17 +40,33 @@ export class AppComponent {
     new Animal("Moose", "Morris", 1, "Herbivore", "Forrest", 2, "Male", "Wading", "Loud noises"),
     new Animal("Racoon", "Rocket", 5, "Omnivore", "Forrest", 2, "Male", "Trash cans", "People")
   ];
+  focusAll: boolean = true;
+  focusAdd: boolean = false;
   editAnimal: Animal;
 
   add(animal: Animal) {
     this.animalsMaster.push(animal);
   }
 
+  showAll() {
+    this.focusAll = true;
+    this.focusAdd = false;
+    this.editAnimal = null;
+  }
+
+  showAdd() {
+    this.focusAll = false;
+    this.focusAdd = true;
+    this.editAnimal = null;
+  }
+
   edit(animal: Animal) {
     this.editAnimal = animal;
+    this.focusAll = false;
   }
 
   closeEdit() {
     this.editAnimal = null;
+    this.focusAll = true;
   }
 }
