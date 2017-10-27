@@ -5,18 +5,21 @@ import { Animal } from './animal.model';
 @Component({
   selector: 'app-root',
   template: `
-    <div class="container">
-      <div class="jumbotron">
-        <h1>Seattle Zoo Tracker</h1>
-        <div class="options">
-          <button type="button" class="btn" (click)="showAll()">
-            All Animals
-          </button>
-          <button type="button" class="btn" (click)="showAdd()">
-            Add Animal
-          </button>
-        </div>
+    <div class="jumbotron">
+      <h1>&nbsp;</h1>
+    </div>
+    <div class="zoo-header">
+      <span class="title">Seattle Zoo Tracker</span>
+      <div class="options">
+        <button type="button" class="btn" (click)="showAll()">
+          All Animals
+        </button>
+        <button type="button" class="btn" (click)="showAdd()">
+          Add Animal
+        </button>
       </div>
+    </div>
+    <div class="container contents">
       <animal-list
         *ngIf="focusAll"
         [animals]="animalsMaster"

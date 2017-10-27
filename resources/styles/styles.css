@@ -1,13 +1,45 @@
+body {
+  color: #3e3420;
+}
 .jumbotron {
-  padding-bottom: 1.2em;
+  margin-bottom: 0px;
+  background-image: url('../images/lion.jpg');
+  background-size: 100% auto;
+  background-position: middle;
 }
 
-.options {
-  padding-top: .8em;
+.zoo-header {
+  background-color: #d4cfc4;
+  padding: .2em .5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.zoo-header .title {
+  font-size: 28px;
 }
 
 .options .btn {
-  margin: 0px .4em;
+  color: #d4cfc3;
+  background-color: #67635a;
+  border-color: #948a72;
+}
+
+.options .btn:hover {
+  color: #aba69c;
+  background-color: #33312d;
+  border-color: #776f5b;
+}
+
+.contents {
+  padding-bottom: 2em;
+}
+
+h2 {
+  font-size: 40px;
+  padding-bottom: .2em;
+  border-bottom: 1px solid #3e3420;
 }
 
 .animal-filter {
@@ -72,6 +104,22 @@
 }
 
 @media screen and (max-width: 460px) {
+  .zoo-header {
+    display: block;
+  }
+
+  .zoo-header .title {
+    display: block;
+    text-align: center;
+    margin-bottom: .2em;
+  }
+
+  .zoo-header .options {
+    display: block;
+    text-align: center;
+    margin-bottom: .5em;
+  }
+
   .animal-panel {
     width: 90%;
     min-width: 200px;
