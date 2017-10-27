@@ -19,6 +19,7 @@ import { Animal } from './animal.model';
         </button>
       </div>
     </div>
+    
     <div class="container contents">
       <animal-list
         *ngIf="focusAll"

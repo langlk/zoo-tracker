@@ -13,6 +13,7 @@ import { Animal } from './animal.model';
         <option value="old">Old Animals Only</option>
       </select>
     </div>
+
     <div id="animal-panels">
       <div *ngFor="let animal of animals | age:ageType"
         (click)="edit(animal)"
@@ -22,7 +23,6 @@ import { Animal } from './animal.model';
           <h4>{{animal.sex}} {{animal.species}}, Age {{animal.age}}</h4>
         </div>
         <div class="panel-body">
-
           <h4>{{animal.diet}}</h4>
           <p><strong>Likes: </strong>{{animal.likes}}</p>
           <p><strong>Dislikes: </strong>{{animal.dislikes}}</p>

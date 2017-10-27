@@ -12,6 +12,7 @@ import { Animal } from './animal.model';
           <label for="name">Name:</label>
           <input [(ngModel)]="animal.name" name="name" class="form-control">
         </div>
+
         <div class="row">
           <div class="form-group col-xs-6">
             <label for="species">Species:</label>
@@ -22,6 +23,7 @@ import { Animal } from './animal.model';
             <input [(ngModel)]="animal.diet" name="diet" class="form-control">
           </div>
         </div>
+
         <div class="row">
           <div class="form-group col-xs-6">
             <label for="location">Location:</label>
@@ -32,6 +34,7 @@ import { Animal } from './animal.model';
             <input [(ngModel)]="animal.caretakersNeeded" name="caretakers-needed" class="form-control">
           </div>
         </div>
+
         <div class="row">
           <div class="form-group col-xs-6">
             <label for="age">Age:</label>
@@ -42,6 +45,7 @@ import { Animal } from './animal.model';
             <input [(ngModel)]="animal.sex" name="sex" class="form-control">
           </div>
         </div>
+
         <div class="row">
           <div class="form-group col-xs-6">
             <label for="likes">Likes:</label>
@@ -52,6 +56,7 @@ import { Animal } from './animal.model';
             <input [(ngModel)]="animal.dislikes" name="dislikes" class="form-control">
           </div>
         </div>
+        
         <button type="button" class="btn" (click)="done()">Done Editing</button>
       </form>
     </div>

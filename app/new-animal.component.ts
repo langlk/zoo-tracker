@@ -12,6 +12,7 @@ import { Animal } from './animal.model';
           <label for="newName">Name:</label>
           <input #newName class="form-control">
         </div>
+
         <div class="row">
           <div class="form-group col-xs-6">
             <label for="newSpecies">Species:</label>
@@ -22,6 +23,7 @@ import { Animal } from './animal.model';
             <input #newDiet class="form-control">
           </div>
         </div>
+
         <div class="row">
           <div class="form-group col-xs-6">
             <label for="newLocation">Location:</label>
@@ -32,6 +34,7 @@ import { Animal } from './animal.model';
             <input #newCaretakers class="form-control">
           </div>
         </div>
+
         <div class="row">
           <div class="form-group col-xs-6">
             <label for="newAge">Age:</label>
@@ -42,6 +45,7 @@ import { Animal } from './animal.model';
             <input #newSex class="form-control">
           </div>
         </div>
+
         <div class="row">
           <div class="form-group col-xs-6">
             <label for="newLikes">Likes:</label>
@@ -52,6 +56,7 @@ import { Animal } from './animal.model';
             <input #newDislikes class="form-control">
           </div>
         </div>
+        
         <button type="button" class="btn"
         (click)="add(newSpecies.value, newName.value, newAge.value, newDiet.value, newLocation.value, newCaretakers.value, newSex.value, newLikes.value, newDislikes.value); newSpecies.value=''; newName.value=''; newAge.value=''; newDiet.value=''; newLocation.value=''; newCaretakers.value=''; newSex.value=''; newLikes.value=''; newDislikes.value='';">
           Submit
