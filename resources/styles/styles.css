@@ -1,6 +1,19 @@
 body {
   color: #3e3420;
 }
+
+.btn {
+  color: #3f3520;
+  background-color: #d4cfc3;
+  border-color: #b9b2a0;
+}
+
+.btn:hover {
+  color: #d6d4d2;
+  background-color: #6d6758;
+  border-color: #635f55;
+}
+
 .jumbotron {
   margin-bottom: 0px;
   background-image: url('../images/lion.jpg');
@@ -11,6 +24,7 @@ body {
 .zoo-header {
   background-color: #d4cfc4;
   padding: .2em .5em;
+  margin-bottom: .4em;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -57,11 +71,28 @@ h2 {
   min-width: 350px;
   margin-left: auto;
   margin-right: auto;
+  border-color: #d4cfc3;
+  color: #3e3420;
 }
 
 .animal-panel:hover {
   cursor: pointer;
+  background-color: #f1f0ec;
+  border-color: #b7b0a1;
 }
+
+.animal-panel .panel-heading {
+  background-color: #e4e1d8;
+  border-color: #d4cfc3;
+  color: #3e3420;
+}
+
+.animal-panel .panel-footer {
+  background-color: #f1f0ec;
+  border-color: #d4cfc3;
+  color: #3e3420;
+}
+
 
 .panel-heading h3 {
   display: inline-block;
