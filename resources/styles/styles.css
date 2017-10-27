@@ -10,6 +10,11 @@
   margin: 0px .4em;
 }
 
+.animal-filter {
+  display: inline-block;
+  max-width: 160px;
+}
+
 #animal-panels {
   display: flex;
   flex-wrap: wrap;
