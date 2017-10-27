@@ -46,6 +46,7 @@ export class AppComponent {
 
   add(animal: Animal) {
     this.animalsMaster.push(animal);
+    this.showAll();
   }
 
   showAll() {
