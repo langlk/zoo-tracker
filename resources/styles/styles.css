@@ -36,3 +36,42 @@
 .caretakers {
   text-align: right;
 }
+
+@media screen and (max-width: 800px) {
+  #animal-panels {
+    display: block;
+  }
+
+  .animal-panel {
+    width: 80%;
+    min-width: 350px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .animal-panel {
+    width: 90%;
+    min-width: 200px;
+  }
+
+  .panel-heading h3 {
+    display: block;
+    width: 100%;
+  }
+
+  .panel-heading h4 {
+    display: block;
+    width: 100%;
+    min-width: 100px;
+    text-align: left;
+  }
+
+  .panel-footer h5 {
+    display: block;
+    width: 100%;
+  }
+
+  .caretakers {
+    text-align: left;
+  }
+}
