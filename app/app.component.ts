@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   template: `
   <h1>Epicodus Zoo</h1>
   <animal-list></animal-list>
+  <new-animal></new-animal>
   `
 })
 
