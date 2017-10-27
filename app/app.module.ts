@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { AnimalListComponent } from './animal-list.component';
 import { NewAnimalComponent } from './new-animal.component';
 import { EditAnimalComponent } from './edit-animal.component';
+import { AgePipe } from './age.pipe';
 
 @NgModule({
   imports: [
@@ -16,7 +17,8 @@ import { EditAnimalComponent } from './edit-animal.component';
     AppComponent,
     AnimalListComponent,
     NewAnimalComponent,
-    EditAnimalComponent
+    EditAnimalComponent,
+    AgePipe
   ],
   bootstrap:    [ AppComponent ]
 })

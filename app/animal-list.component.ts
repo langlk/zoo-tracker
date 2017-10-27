@@ -6,8 +6,13 @@ import { Animal } from './animal.model';
   selector: 'animal-list',
   template: `
     <h2>All Animals</h2>
+    <select (change)="onChange($event.target.value)" class="form-control">
+      <option value="all">All Animals</option>
+      <option value="young">Young Animals Only</option>
+      <option value="old">Old Animals Only</option>
+    </select>
     <ul>
-      <li *ngFor="let animal of animals"
+      <li *ngFor="let animal of animals | age:ageType"
         (click)="edit(animal)">
         {{animal.name}} - {{animal.species}}
       </li>
@@ -18,8 +23,13 @@ import { Animal } from './animal.model';
 export class AnimalListComponent {
   @Input() animals: Animal[];
   @Output() editClick = new EventEmitter();
+  ageType: string = "all";
 
   edit(animal: Animal) {
     this.editClick.emit(animal);
+  }
+
+  onChange(chosen: string) {
+    this.ageType = chosen;
   }
 }
