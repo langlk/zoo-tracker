@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 import { Animal } from './animal.model';
 
@@ -43,21 +43,20 @@ import { Animal } from './animal.model';
         <label for="newDislikes">Dislikes:</label>
         <input #newDislikes class="form-control">
       </div>
-      <button class="btn" add(newSpecies, newName, newAge, newDiet, newLocation, newCaretakers, newSex, newLikes, newDislikes)>Submit</button>
+      <button type="button" class="btn"
+      (click)="add(newSpecies.value, newName.value, newAge.value, newDiet.value, newLocation.value, newCaretakers.value, newSex.value, newLikes.value, newDislikes); newDescription.value='';">
+        Submit
+      </button>
     </form>
   `
 })
 
 export class NewAnimalComponent {
-  add(species: string,
-  name: string,
-  age: number,
-  diet: string,
-  location: string,
-  caretakersNeeded: number,
-  sex: string,
-  likes: string,
-  dislikes: string) {
+  @Output() addAnimal = new EventEmitter();
+
+  add(species: string, name: string, age: number, diet: string, location: string, caretakersNeeded: number, sex: string, likes: string, dislikes: string) {
+
     var animal = new Animal(species, name, age, diet, location, caretakersNeeded, sex, likes, dislikes);
+    this.addAnimal.emit(animal);
   }
 }
